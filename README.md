@@ -1,9 +1,9 @@
 MAESTRO Framework
-This repository contains the core codebase for the MAESTRO framework, focusing on the simulation and detection of social engineering attacks using multi-agent architectures.
+MAESTRO (Multi-Agent Social Engineering Attack Recognition) is a lightweight cybersecurity framework designed to detect advanced, multi-turn social engineering attacks on professional platforms like LinkedIn.
 
-📁 Repository Structure
-benign conversation generator.ipynb — Generates the benign conversation datasets used for training and baseline evaluation.
+Unlike traditional security systems that only analyze isolated messages, MAESTRO models the sequential flow of an entire conversation to identify attackers who slowly build trust before making a malicious request.
 
-malicious conversation generator.ipynb — Generates the malicious conversation datasets simulating social engineering and phishing vectors.
+ How It Works
+Dataset Generation: Custom simulation pipelines (benign conversation generator and malicious conversation generator) use LLMs to generate realistic, multi-turn conversational datasets spanning various victim personas, attack scenarios, and pressure styles.
 
-phishing_detector.ipynb — The core multi-agent architecture designed to analyze data and detect phishing attempts.
+Multi-Agent Detection: The core architecture (phishing_detector) processes the conversation turns using a frozen language encoder and a rule-based tactic agent. It analyzes the temporal flow of the interaction to classify whether the conversation is ultimately malicious or benign
